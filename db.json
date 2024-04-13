@@ -1,0 +1,83 @@
+{
+  "utilisateur": [
+    {
+      "id": "a2c3",
+      "nom": "Kimwayne",
+      "prenom": "kerry-isidor",
+      "username": "kerrykimwayne",
+      "mail": "isidortoy@gmail.com",
+      "password": "kimwayne",
+      "confirmpassword": "kimwayne"
+    },
+    {
+      "id": "4125",
+      "nom": "guezos",
+      "prenom": "josias",
+      "username": "josias-guezo",
+      "mail": "josiasguezo@gmail.com",
+      "password": "josias123",
+      "confirmpassword": "josias123"
+    },
+    {
+      "id": "509f",
+      "nom": "BOlass",
+      "prenom": "Johnss",
+      "username": "bolajohn",
+      "mail": "bolajons@gmail.com",
+      "password": "111111",
+      "confirmpassword": "111111"
+    }
+  ],
+  "publication": [],
+  "message": [
+    {
+      "id": "7ec1",
+      "message": "salut les nuls",
+      "expediteur": "4125",
+      "recepteur": "a2c3"
+    },
+    {
+      "id": "f82b",
+      "message": "d'accord man",
+      "expediteur": "4125",
+      "recepteur": "a2c3"
+    },
+    {
+      "id": "5542",
+      "message": "d'accord man",
+      "expediteur": "4125",
+      "recepteur": "a2c3"
+    },
+    {
+      "id": "23f2",
+      "message": "cc",
+      "expediteur": "a2c3",
+      "recepteur": "4125"
+    },
+    {
+      "id": "70ac",
+      "message": "comment va tu",
+      "expediteur": "a2c3",
+      "recepteur": "4125"
+    },
+    {
+      "id": "efa9",
+      "message": "yo",
+      "expediteur": "a2c3",
+      "recepteur": "4125"
+    },
+    {
+      "id": "7a54",
+      "message": "salut kerry",
+      "expediteur": "509f",
+      "recepteur": "a2c3"
+    },
+    {
+      "id": "1c92",
+      "message": "comment vas tu?",
+      "expediteur": "a2c3",
+      "recepteur": "509f"
+    }
+  ],
+  "like": []
+}
