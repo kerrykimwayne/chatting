@@ -34,7 +34,7 @@ export default function Connexion() {
         <Stack width={'100%'}>
             <Stack alignItems={'center'} height={'100vh'} justifyContent={'center'} direction={'column'} gap={2}>
                 <div>
-                    <Typography variant='h2'><People sx={{ color: '#0000ff' }} fontSize='40' /> Inscrition</Typography>
+                    <Typography variant='h2'><People sx={{ color: '#0000ff' }} fontSize='40' /> Connexion</Typography>
                 </div>
                 <Box>
                     <form action="" onSubmit={handleSubmit(submiting)}>
@@ -47,7 +47,7 @@ export default function Connexion() {
                             </Grid>
                         </Grid>
 
-                        <Button type="submit">s'inscrire</Button>
+                        <Button type="submit">se connecter</Button>
                     </form>
 
                 </Box>

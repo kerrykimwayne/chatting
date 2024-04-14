@@ -25,7 +25,7 @@ export default function Inscrition() {
                         redirection('/', { replace: true, state: { form: '/' } })
                         reset()
                     }).catch((err) => {
-                        toast.error("erreur lors de la création")
+                        toast.error(err)
                     })
                 }
             }).catch((err) => {
