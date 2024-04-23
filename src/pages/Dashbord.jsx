@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Dashbord() {
     const redirection = useNavigate()
     useEffect(() => {
-        if (!localStorage.getItem("utilisateur")) {
+        if (!localStorage.getItem("connecter")) {
             redirection('/connexion', { replace: true, state: { form: '/' } })
         }
     })

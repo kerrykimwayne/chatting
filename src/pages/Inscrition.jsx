@@ -1,7 +1,7 @@
 import { People } from '@mui/icons-material'
 import { Box, Grid, Stack, TextField, Typography } from '@mui/material'
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { Link, useNavigate } from 'react-router-dom'
@@ -15,21 +15,12 @@ export default function Inscrition() {
             toast.error("les deux mot de passe correspond pas")
         }
         else {
-            axios.get(`http://localhost:3000/utilisateur?mail=${data.mail}`).then((res) => {
-                if (res.data.length > 0) {
-                    toast.error("cet utilisateur existe déjà")
-                }
-                else {
-                    axios.post('http://localhost:3000/utilisateur', data).then((res) => {
-                        toast.success("compte créé")
-                        redirection('/', { replace: true, state: { form: '/' } })
-                        reset()
-                    }).catch((err) => {
-                        toast.error(err)
-                    })
-                }
+            axios.post('http://127.0.0.1:8000/listandcreat/', data).then((res) => {
+                toast.success("compte créé")
+                redirection('/connexion', { replace: true, state: { form: '/' } })
+                reset()
             }).catch((err) => {
-                toast.error("erreur lors de la création")
+                toast.error(err)
             })
 
 
@@ -52,8 +43,8 @@ export default function Inscrition() {
 
     }
     useEffect(() => {
-        if (localStorage.getItem("utilisateur")) {
-            redirection('/connexion', { replace: true, state: { form: '/' } })
+        if (localStorage.getItem("connecter")) {
+            redirection('/', { replace: true, state: { form: '/' } })
         }
     })
     return (
@@ -93,7 +84,7 @@ export default function Inscrition() {
                                 {errors.username && <p>{message}</p>}
                             </Grid>
                             <Grid item xs={12} md={12}>
-                                <TextField id='outlined-basic' label="email" variant='outlined' size='small' fullWidth {...register("mail", {
+                                <TextField id='outlined-basic' label="email" variant='outlined' size='small' fullWidth {...register("email", {
                                     required: true, minLength: { value: 6, message: "entrer votre nom" }, pattern: {
                                         value: new RegExp("^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[A-Za-z]{2,}$"),
                                         message: "email invalid"

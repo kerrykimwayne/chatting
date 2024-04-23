@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Navbar() {
     const redirection = useNavigate()
     const redirige = () => {
-        localStorage.removeItem("utilisateur")
+        localStorage.removeItem("connecter")
         redirection('/connexion', { replace: true, state: { form: '/connexion' } })
         toast('vous etes déconnecter')
     }

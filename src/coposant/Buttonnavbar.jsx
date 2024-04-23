@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import User from './User'
 import Messageperso from './Messageperso'
 import Mymessage from './Mymessage'
+import Acceuil from './Acceuil'
+import Profile from './Profile'
 
 export default function Buttonnavbar() {
     const [value, setvalue] = useState('home')
@@ -13,10 +15,11 @@ export default function Buttonnavbar() {
     }
     return (
         <div>
-            {value === 'home' && <p>Bonojur</p>}
+            {value === 'home' && <Acceuil />}
             {value === 'message' && <Mymessage />}
+            {value === 'account' && <Profile />}
             {value === 'people' && <User />}
-            <BottomNavigation showLabel sx={{ width: "100%", position: "fixed", bottom: 0 }} value={value} onChange={change}>
+            <BottomNavigation sx={{ width: "100%", position: "fixed", bottom: 0 }} value={value} onChange={change}>
                 <BottomNavigationAction label="Acceuil" icon={<Home />} value={'home'} />
                 <BottomNavigationAction label="Message" icon={<Message />} value={'message'} />
                 <BottomNavigationAction label="Profiles" icon={<AccountCircle />} value={'account'} />
